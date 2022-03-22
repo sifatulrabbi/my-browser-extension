@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles.css" />
+        <title>First Browser Extension</title>
+    </head>
+    <body>
+        <header>
+            <h1>
+                Welcome <span class="colored"><strong>Sifatul</strong> </span>
+            </h1>
+            <h3>
+                Today is
+                <strong class="colored">
+                    <span id="date">22 March, 2022</span> @
+                    <span id="time">1:55 pm</span></strong
+                >
+            </h3>
+        </header>
+        <main>
+            <section>
+                <div class="search-box">
+                    <form action="submit" id="searchForm">
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Search..."
+                            required
+                            aria-labelledby="search"
+                            aria-label="search"
+                        />
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+            </section>
+            <section>
+                <div id="githubStatus">
+                    <h3>Github status</h3>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <script src="../dist/bundle.min.js"></script>
+    </body>
+</html>

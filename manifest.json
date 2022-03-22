@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Browser Extension",
+    "description": "My First Browser Extension",
+    "version": "1.0.0",
+    "author": "From FreeCodeCamp",
+    "action": {
+        "default_title": "Have a good day",
+        "default_popup": "popup.html"
+    },
+    "chrome_url_overrides": {
+        "newtab": "public/newtab.html"
+    },
+    "permissions": ["activeTab", "bookmarks"]
+}
