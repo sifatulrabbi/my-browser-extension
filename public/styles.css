@@ -131,6 +131,18 @@ main {
     border: 2px solid var(--color-primary);
 }
 
+.quick-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.quick-links > a {
+    display: block;
+    padding: 0.4rem 0.6rem;
+}
+
 .accordion {
     width: max-content;
     max-width: 100%;

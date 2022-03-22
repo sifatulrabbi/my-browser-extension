@@ -5,7 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./styles.css" />
-        <title>First Browser Extension</title>
+        <link rel="icon" href="./favicon.png" />
+        <title>My Homepage</title>
     </head>
     <body>
         <header>
@@ -17,17 +18,30 @@
                 <span id="time"></span>
             </h3>
         </header>
-        <form action="submit" id="searchForm">
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Search..."
-                required
-                aria-labelledby="search"
-                aria-label="search"
-            />
-            <button type="submit">Search</button>
-        </form>
+        <div>
+            <form action="submit" id="searchForm">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search..."
+                    required
+                    aria-labelledby="search"
+                    aria-label="search"
+                />
+                <button type="submit">Search</button>
+            </form>
+            <div class="quick-links">
+                <a href="https://github.com/sifatulrabbi">Github</a>
+                <a href="https://github.com/courier-007">Github/C7</a>
+                <a href="https://www.upwork.com/nx/find-work/best-matches">
+                    Upwork
+                </a>
+                <a href="https://www.fiverr.com/seller_dashboard">Fiverr</a>
+                <a href="https://app.grammarly.com/ddocs/1430099787">
+                    Grammarly/write
+                </a>
+            </div>
+        </div>
         <main>
             <section>
                 <div id="bookmarksContainer" class="container">

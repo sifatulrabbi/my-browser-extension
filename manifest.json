@@ -1,11 +1,11 @@
 {
     "manifest_version": 3,
-    "name": "Browser Extension",
-    "description": "My First Browser Extension",
+    "name": "My Homepage",
+    "description": "My Browser Homepage Extension",
     "version": "1.0.0",
-    "author": "From FreeCodeCamp",
+    "author": "Md Sifatul Islam Rabbi (https://github.com/sifatulrabbi",
     "action": {
-        "default_title": "Have a good day",
+        "default_title": "My Homepage",
         "default_popup": "popup.html"
     },
     "chrome_url_overrides": {
