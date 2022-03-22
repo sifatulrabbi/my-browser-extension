@@ -12,34 +12,25 @@
             <h1>
                 Welcome <span class="colored"><strong>Sifatul</strong> </span>
             </h1>
-            <h3>
-                Today is
-                <strong class="colored">
-                    <span id="date">22 March, 2022</span> @
-                    <span id="time">1:55 pm</span></strong
-                >
+            <h3 style="font-weight: normal">
+                <span id="date">22 March, 2022</span> @
+                <span id="time"></span>
             </h3>
         </header>
+        <form action="submit" id="searchForm">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search..."
+                required
+                aria-labelledby="search"
+                aria-label="search"
+            />
+            <button type="submit">Search</button>
+        </form>
         <main>
             <section>
-                <div class="search-box">
-                    <form action="submit" id="searchForm">
-                        <input
-                            type="text"
-                            id="searchInput"
-                            placeholder="Search..."
-                            required
-                            aria-labelledby="search"
-                            aria-label="search"
-                        />
-                        <button type="submit">Search</button>
-                    </form>
-                </div>
-                <div
-                    id="bookmarksContainer"
-                    class="container"
-                    style="margin-top: 2rem"
-                >
+                <div id="bookmarksContainer" class="container">
                     <h3>Bookmarks</h3>
                 </div>
             </section>

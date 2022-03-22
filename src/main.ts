@@ -1,4 +1,5 @@
 import { showBookmarks } from "./bookmarks";
+import { showDateAndTime } from "./date-time";
 
 const searchForm = document.querySelector<HTMLFormElement>("#searchForm");
 const accordions =
@@ -6,6 +7,8 @@ const accordions =
 const bookmarksContainer = document.querySelector<HTMLDivElement>(
     "#bookmarksContainer"
 );
+const dateContainer = document.querySelector<HTMLSpanElement>("#date");
+const timeContainer = document.querySelector<HTMLSpanElement>("#time");
 
 searchForm?.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -16,8 +19,7 @@ searchForm?.addEventListener("submit", (e) => {
     const searchArr = searchText.split(" ");
     const q = searchArr.join("+");
 
-    // window.location.href = `https://google.com/search?q=${q}`;
-    console.log(q);
+    window.location.href = `https://google.com/search?q=${q}`;
 });
 
 accordions.forEach((accordion) => {
@@ -32,4 +34,8 @@ accordions.forEach((accordion) => {
 
 if (bookmarksContainer) {
     showBookmarks(bookmarksContainer);
+}
+
+if (dateContainer && timeContainer) {
+    showDateAndTime(dateContainer, timeContainer);
 }
