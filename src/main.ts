@@ -1,25 +1,11 @@
-const GITHUB_API_TOKEN = "";
-
-let githubProfile: any;
-
-async function getGithubProfile() {
-    try {
-        const res = await fetch("https://api.github.com/users/sifatulrabbi", {
-            method: "GET",
-            headers: {
-                Accept: "application/json",
-            },
-        });
-        const data = await res.json();
-        githubProfile = data;
-        console.log(githubProfile);
-    } catch (err) {
-        console.log(err);
-    }
-}
-getGithubProfile();
+import { showBookmarks } from "./bookmarks";
 
 const searchForm = document.querySelector<HTMLFormElement>("#searchForm");
+const accordions =
+    document.querySelectorAll<HTMLButtonElement>(".accordion-title");
+const bookmarksContainer = document.querySelector<HTMLDivElement>(
+    "#bookmarksContainer"
+);
 
 searchForm?.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -33,3 +19,17 @@ searchForm?.addEventListener("submit", (e) => {
     // window.location.href = `https://google.com/search?q=${q}`;
     console.log(q);
 });
+
+accordions.forEach((accordion) => {
+    accordion.addEventListener("click", () => {
+        if (accordion.parentElement?.classList.contains("active")) {
+            accordion.parentElement?.classList.remove("active");
+        } else {
+            accordion.parentElement?.classList.add("active");
+        }
+    });
+});
+
+if (bookmarksContainer) {
+    showBookmarks(bookmarksContainer);
+}
